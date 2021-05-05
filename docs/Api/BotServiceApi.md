@@ -22,7 +22,7 @@ Generating jwt token.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $config = VoximplantKitIM\Configuration::getDefaultConfiguration();
-$config->setHost('https://kit-im-{{region}}.voximplant.com/api/v3');
+$config->setHost('https://kit-im-{{region}}.voximplant.com');
 
 // Configure API key authorization: access_token
 $config->setApiKey('access_token', 'your_access_token');
@@ -80,7 +80,7 @@ Refreshing jwt token.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $config = VoximplantKitIM\Configuration::getDefaultConfiguration();
-$config->setHost('https://kit-im-{{region}}.voximplant.com/api/v3');
+$config->setHost('https://kit-im-{{region}}.voximplant.com');
 
 $kitApi = new VoximplantKitIM\VoximplantKitIMClient($config);
 
@@ -129,7 +129,7 @@ Send event to channel
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $config = VoximplantKitIM\Configuration::getDefaultConfiguration();
-$config->setHost('https://kit-im-{{region}}.voximplant.com/api/v3');
+$config->setHost('https://kit-im-{{region}}.voximplant.com');
 
 // Configure JWT token authorization
 $config->setAccessToken('your_jwt_token');

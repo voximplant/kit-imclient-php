@@ -52,7 +52,7 @@ Please follow the [installation procedure](#installation--usage) and then run th
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $config = VoximplantKitIM\Configuration::getDefaultConfiguration();
-$config->setHost('https://kit-im-{{region}}.voximplant.com/api/v3');
+$config->setHost('https://kit-im-{{region}}.voximplant.com');
 
 // Configure API key authorization: access_token
 $config->setApiKey('access_token', 'your_access_token');
@@ -75,7 +75,7 @@ try {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://kit-im-{{region}}.voximplant.com/api/v3*
+All URIs are relative to *https://kit-im-{{region}}.voximplant.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
