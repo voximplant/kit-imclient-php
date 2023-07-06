@@ -62,6 +62,7 @@ class MessagingEventMessageSenderDataType implements ModelInterface, ArrayAccess
         'sender_display_name' => 'string',
         'sender_avatar' => 'string',
         'sender_email' => 'string',
+        'sender_type' => 'string',
         'is_bot' => 'bool'
     ];
 
@@ -76,6 +77,7 @@ class MessagingEventMessageSenderDataType implements ModelInterface, ArrayAccess
         'sender_display_name' => null,
         'sender_avatar' => null,
         'sender_email' => null,
+        'sender_type' => null,
         'is_bot' => null
     ];
 
@@ -111,6 +113,7 @@ class MessagingEventMessageSenderDataType implements ModelInterface, ArrayAccess
         'sender_display_name' => 'sender_display_name',
         'sender_avatar' => 'sender_avatar',
         'sender_email' => 'sender_email',
+        'sender_type' => 'sender_type',
         'is_bot' => 'is_bot'
     ];
 
@@ -125,6 +128,7 @@ class MessagingEventMessageSenderDataType implements ModelInterface, ArrayAccess
         'sender_display_name' => 'setSenderDisplayName',
         'sender_avatar' => 'setSenderAvatar',
         'sender_email' => 'setSenderEmail',
+        'sender_type' => 'setSenderType',
         'is_bot' => 'setIsBot'
     ];
 
@@ -139,6 +143,7 @@ class MessagingEventMessageSenderDataType implements ModelInterface, ArrayAccess
         'sender_display_name' => 'getSenderDisplayName',
         'sender_avatar' => 'getSenderAvatar',
         'sender_email' => 'getSenderEmail',
+        'sender_type' => 'getSenderType',
         'is_bot' => 'getIsBot'
     ];
 
@@ -207,6 +212,7 @@ class MessagingEventMessageSenderDataType implements ModelInterface, ArrayAccess
         $this->container['sender_display_name'] = isset($data['sender_display_name']) ? $data['sender_display_name'] : null;
         $this->container['sender_avatar'] = isset($data['sender_avatar']) ? $data['sender_avatar'] : null;
         $this->container['sender_email'] = isset($data['sender_email']) ? $data['sender_email'] : null;
+        $this->container['sender_type'] = isset($data['sender_type']) ? $data['sender_type'] : null;
         $this->container['is_bot'] = isset($data['is_bot']) ? $data['is_bot'] : null;
     }
 
@@ -350,6 +356,30 @@ class MessagingEventMessageSenderDataType implements ModelInterface, ArrayAccess
     public function setSenderEmail($sender_email)
     {
         $this->container['sender_email'] = $sender_email;
+
+        return $this;
+    }
+
+    /**
+     * Gets sender_type
+     *
+     * @return string
+     */
+    public function getSenderType()
+    {
+        return $this->container['sender_type'];
+    }
+
+    /**
+     * Sets sender_type
+     *
+     * @param string $sender_type If the operator responds, then the value is 'agent' otherwise 'bot'
+     *
+     * @return $this
+     */
+    public function setSenderType($sender_type)
+    {
+        $this->container['sender_type'] = $sender_type;
 
         return $this;
     }

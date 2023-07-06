@@ -316,7 +316,7 @@ class MessagingOutgoingChatCloseEventType implements ModelInterface, ArrayAccess
     /**
      * Sets event_type
      *
-     * @param string $event_type event_type
+     * @param string $event_type Will have the value 'close_conversation'
      *
      * @return $this
      */

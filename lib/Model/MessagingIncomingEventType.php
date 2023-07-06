@@ -316,7 +316,7 @@ class MessagingIncomingEventType implements ModelInterface, ArrayAccess
     /**
      * Sets event_type
      *
-     * @param string $event_type event_type
+     * @param string $event_type Must be 'send_message'
      *
      * @return $this
      */

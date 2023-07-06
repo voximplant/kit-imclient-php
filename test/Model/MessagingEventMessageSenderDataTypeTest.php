@@ -112,6 +112,13 @@ class MessagingEventMessageSenderDataTypeTest extends \PHPUnit_Framework_TestCas
     }
 
     /**
+     * Test attribute "sender_type"
+     */
+    public function testPropertySenderType()
+    {
+    }
+
+    /**
      * Test attribute "is_bot"
      */
     public function testPropertyIsBot()
